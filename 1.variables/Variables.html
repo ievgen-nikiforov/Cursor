@@ -14,8 +14,35 @@
     <div>console.log("min value",Math.min(a, b, c));</div>
     <div>let summ=a+b+c</div>
     <div>console.log("summ of all values is summ=",summ);</div>
-    
-
+    <div>console.log("summ of floor values",roundSummValue );
+    </div>
+    <div>console.log("round to the hundreds", Math.ceil(roundSummValue/100)*100);
+    </div>
+    <div>console.log("boolean value if the floor summ is odd", Boolean(Math.floor(summ)%2));
+    </div>
+    <div>console.log("change amount of 500 minus summ of prices", 500 -summ);
+    </div>
+<div>console.log("rounded avarage price", Math.round((summ/3)*100)/100);
+</div>
+<div>let discountPercent=Math.random();
+</div>
+<div>console.log("discount is", discount);
+</div>
+<div>let realCost=summ/2;
+</div>
+<div>console.log("real Cost of the products is", realCost);
+</div>
+<div>
+    let discountValue=summ*discountPercent;
+</div>
+<div>console.log("the value of discount", discountValue);
+</div>
+<div>reducedProfit=realCost-discountValue;
+</div>
+<div>console.log("the reduced prodit after discount is", reducedProfit);
+</div>
+<div>console.log("price to pay rounded", (Math.round((summ-discountValue)*100))/100);
+</div>
 
 
 </body>
