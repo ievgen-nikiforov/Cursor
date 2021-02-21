@@ -1,16 +1,16 @@
-let a=15.678;
-let b=123.965;
-let c=90.2345;
+let apple=15.678;
+let bread=123.965;
+let candy=90.2345;
 // max value
 
-console.log("max value", (Math.max(a, b, c)));
+console.log("max value", (Math.max(apple, bread, candy)));
 // min value
-console.log("min value",Math.min(a, b, c));
+console.log("min value",Math.min(apple, bread, candy));
 // summ
-let summ=a+b+c;
+let summ=apple+bread+candy;
 console.log("summ of all values is summ=",summ);
 // summ of rounded to the floow numbers
-let roundSummValue=Math.floor(a)+Math.floor(b)+Math.floor(c)
+let roundSummValue=Math.floor(apple)+Math.floor(bread)+Math.floor(candy)
 console.log("summ of floor values",roundSummValue );
 
 console.log("round to the hundreds", Math.round(roundSummValue/100)*100);
