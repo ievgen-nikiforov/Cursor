@@ -1,14 +1,14 @@
 let N = prompt("Please input integer N=");
-N= Number(N);
+N= Number.isInteger(N);
 console.log("N=", N);
-if (isNaN(N)){ 
+if (!N){ 
     console.log("N is not a proper number");
 } else {
     let M = prompt("Please input integer M=");
-    M= Number(M);
+    M= Number.isInteger(M);
     console.log("M=", M);
 
-    if (isNaN(M)){ 
+    if (!M){ 
         console.log("M is not a proper number");
     }else{
    let  omitEven = confirm("Should we omit even numbers?");
