@@ -6,6 +6,8 @@ if (isNaN(N)){
 } else {
     let M = prompt("Please input integer M=");
     M= Number(M);
+    console.log("M=", M);
+
     if (isNaN(M)){ 
         console.log("M is not a proper number");
     }else{
@@ -21,6 +23,6 @@ if (isNaN(N)){
        
 
     }
-    console.log(Summ);
+    console.log("Summ =", Summ);
     }
 }
