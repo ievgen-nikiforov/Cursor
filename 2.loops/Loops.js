@@ -15,13 +15,16 @@ if (!isIntegerN||isNaN(N)){
    let  omitEven = confirm("Should we omit even numbers?");
      let Summ=0;
      for (let i=N; i<= M; i++){
-       if (omitEven===true && (i%2===1)){
-        Summ=Summ+i;
+       if (omitEven===true){
+           if (i%2===1){
+        Summ=Summ+i;}
+        else
+        {continue}
        }
         else {
             Summ=Summ+i;
         }
-       
+        
 
     }
     console.log("Summ =", Summ);
