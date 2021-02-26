@@ -1,38 +1,28 @@
-let N = prompt("Please input integer N=");
-numberN=Number(N);
-while (!Number.isInteger(numberN)||isNaN(numberN)||N==="")
+
+let startNumberOfRange=null;
+while (!Number.isInteger(startNumberOfRange)||!startNumberOfRange)
 { 
-    N = prompt("Please input proper integer N=");
-    numberN=Number(N);
+    startNumberOfRange = +prompt("Please input proper integer N=");
 } 
-console.log("N=", numberN);
+console.log("N=", startNumberOfRange);
 
-let M = prompt("Please input integer M=");
-numberM=Number(M);
+let endNumberOfRange=null;
 
-    while (!Number.isInteger(numberM)||isNaN(numberM)||M==="")
+    while (!Number.isInteger(endNumberOfRange)||!endNumberOfRange)
 { 
-    M = prompt("Please input proper integer M=");
-    numberM=Number(M);
+    endNumberOfRange = +prompt("Please input proper integer M=");
     
 } 
-console.log("M=", numberM);
+console.log("M=", endNumberOfRange);
 
 
-   let  omitEven = confirm("Should we omit even numbers?");
+   const  omitEven = confirm("Should we omit even numbers?");
      let Summ=0;
-     for (let i=numberN; i<=numberM; i++){
-       if (omitEven===true){
-           if (i%2===1){
-        Summ=Summ+i;}
-        else
-        {continue}
-       }
-        else {
-            Summ=Summ+i;
-        }
-        
-
+     for (let i=startNumberOfRange; i<=endNumberOfRange; i++){
+       if (omitEven&&i%2===0){
+            continue }    
+           
+           Summ+=i; 
     }
     console.log("Summ =", Summ);
     
