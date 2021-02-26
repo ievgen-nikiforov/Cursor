@@ -2,11 +2,11 @@ const applePrice=15.678;
 const breadPrice=123.965;
 const candyPrice=90.2345;
 // max value
-const maxProductPricee=(Math.max(applePrice, breadPrice, candyPrice)
+const maxProductPrice=(Math.max(applePrice, breadPrice, candyPrice));
 console.log("max value",maxProductPrice);
 // min value
 const minProductPrice=Math.min(applePrice, breadPrice, candyPrice)
-console.log("min value",minProductPrices);
+console.log("min value",minProductPrice);
 // summ
 const summ=applePrice+breadPrice+candyPrice;
 console.log("summ of all values is summ=",summ);
@@ -30,5 +30,5 @@ const discountValue=Math.floor(Math.random() * (maxDiscount - minDiscount + 1)) 
 console.log("the value of discount", discountValue);
 reducedProfit=realCost-discountValue;
 console.log("the reduced profit after discount is", reducedProfit);
-const priceToPay=Math.round((summ-discountValue)*100))/100;
+const priceToPay=Math.round(((summ-discountValue)*100))/100;
 console.log("price to pay rounded", priceToPay);
