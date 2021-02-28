@@ -60,9 +60,6 @@ console.log("Formated name is", formatedName);
   getRandomNumber(5,10)
 
   function countLetter(letter, str){
-      const lettt=letter;
-      const t=typeof lettt;
-      console.log(t);
     const stringLength= str.length;
     let counter=0;
     let i=0;
@@ -73,4 +70,5 @@ console.log("Formated name is", formatedName);
     console.log ("The "+letter+" is repeted "+counter+" times in the "+str);
   }
 
-  countLetter("a", "This code will instantiate a function object")
+  countLetter("a", "afghjkertyui fnrtyu bxcvbnaa")
+
