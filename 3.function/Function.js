@@ -1,74 +1,64 @@
 function getMaxDigit(number) {
-    const originNumber=number;
-    let currentNumber;
-    let previousNumber=0;
-    let maxValue;
-    while ((number)/10>0){
-currentNumber=number%10;
-maxValue = Math.max(currentNumber, previousNumber);
-previousNumber=maxValue;
-number= Math.floor(number/10);
-    }
-    console.log("Maximum digit out of "+originNumber+" is", maxValue);
-  }
-  getMaxDigit(087678908767890);
-
-function getNumberDegree (number, degree){
-    let numberDegree=1;
-    let i=0;
-    if (degree>=0){
-    while (i<degree){
-    numberDegree=numberDegree*number;
-    i++;
-        }}
-while(i>degree){
-    numberDegree=numberDegree*(1/number);
-    i--;
+  return Math.max(...Array.from(String(number)).map((item) => parseInt(item)))
 }
-console.log("Number "+number+" in degree "+degree+" equals "+numberDegree);
-  }
-  getNumberDegree(3,5)
+console.log("Max value in 087678908767890 is",getMaxDigit(087678908767890));
 
-  function nameFormating (str){
-const firstLetter=str.charAt(0).toUpperCase();
-let i=1;
-const stringLength= str.length;
-formatedName=firstLetter;
-while (i<stringLength){
-formatedName+=str.charAt(i).toLowerCase();
-i++;
+function getNumberDegree(number, degree) {
+  let numberDegree = 1;
+  let i = 0;
+  if (degree >= 0) {
+      while (i < degree) {
+          numberDegree = numberDegree * number;
+          i++;
+      }
+  }
+  while (i > degree) {
+      numberDegree = numberDegree * (1 / number);
+      i--;
+  }
+  return numberDegree;
 }
-console.log("Formated name is", formatedName);
+console.log("3 in 5 degree is", getNumberDegree(3, 5))
 
+function nameFormating(str) {
+  const lowerCaseString = str.toLowerCase()
+  const firstLetter=lowerCaseString.charAt(0).toUpperCase();
+  const replaceLetter=lowerCaseString.charAt(0)
+  const formattedString=lowerCaseString.replace(replaceLetter, firstLetter);
+return formattedString
+}
+console.log("Formated name is", nameFormating("iEVGEn"));
+
+function incomeWithoutTax(salary) {
+  const income = +salary;
+  const taxPercent = 0.18 + 0.015;
+  const netIncome = income - (income * taxPercent)
+  return netIncome
+}
+
+console.log("Salary witout taxes is", incomeWithoutTax(1000));
+
+function getRandomNumber(startNumber, endNumber) {
+  const randomNumber = Math.round(Math.random() * (endNumber - startNumber)) + startNumber
+return randomNumber;
+}
+
+console.log("Random number from the range between 5 and 10 is ", getRandomNumber(5, 10))
+
+
+function countLetter(letter, str) {
+   const strLowerCase=str.toLowerCase();
+  const letterLowerCase=letter.toLowerCase();
+  const stringLength = str.length;
+  let counter = 0;
+  let i = 0;
+  while (i < stringLength) {
+      if (strLowerCase.charAt(i) === letterLowerCase) {
+          counter++
+      }
+      i++;
   }
-  nameFormating("iEVGEn");
+  return counter;
+}
 
-  function incomeWithoutTax (salary){
-    const income=+salary;
-    const taxPercent=0.18 + 0.015;
-    const netIncome = income - (income*taxPercent)
-    console.log("Salary witout taxes is ", netIncome)
-  }
-
-  incomeWithoutTax(1000);
-
-  function getRandomNumber(startNumber, endNumber){
-      const randomNumber = Math.round(Math.random()*(endNumber-startNumber))+startNumber
-      console.log("Random number from the range between "+startNumber+" and "+ endNumber+" is "+randomNumber)
-  }
-
-  getRandomNumber(5,10)
-
-  function countLetter(letter, str){
-    const stringLength= str.length;
-    let counter=0;
-    let i=0;
-    while (i<stringLength){
-    if (str.charAt(i)===letter) {counter++}
-    i++;
-    }
-    console.log ("The "+letter+" is repeted "+counter+" times in the "+str);
-  }
-
-  countLetter("a", "afghjkertyui fnrtyu bxcvbnaa")
-
+console.log("The a is repeted in Afghjkertyui fnrtyu bxcvbnaa",countLetter("a", "afghjkertyui fnrtyu bxcvbnaa")+" times");
