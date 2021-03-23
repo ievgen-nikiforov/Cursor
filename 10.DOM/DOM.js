@@ -1,8 +1,8 @@
-function generateBlocks() {
-    for (let index = 0; index < 6; index++) {
+function generateBlocksInterval() {
+    for (let index = 0; index < 5; index++) {
       const newDiv = document.createElement("div");
       document.body.append(newDiv);
-      for (let index = 0; index < 6; index++) {
+      for (let index = 0; index < 5; index++) {
         const newDiv = document.createElement("div");
         document.body.append(newDiv);
   
@@ -30,7 +30,7 @@ function generateBlocks() {
     }
   }
   
-  generateBlocks();
+  
   
 
 
