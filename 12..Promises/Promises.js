@@ -1,6 +1,4 @@
 function getRandomChinese(length) {
-        let i = 0;
-        let chineseString = "";
         let promise = new Promise (
           function (resolve, reject){
             let chineseLetter=""
@@ -12,12 +10,14 @@ function getRandomChinese(length) {
               reject(new Error("Whoops!"))
 
           })
+          let i = 0;
+          let chineseString = "";  
           while (i < length) {
-            chineseString = chineseString + promise.then (result => result);
-            console.log(promise.then (result => result))
+            chineseString = chineseString + promise.then();
             i++
           }
           console.log(chineseString)
+          return chineseString
       }
   
   getRandomChinese(5);
