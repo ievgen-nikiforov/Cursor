@@ -7,14 +7,15 @@ function getRandomChinese(length) {
                 chineseLetter += String.fromCharCode(date)
               },5000)
               resolve (chineseLetter)
-              reject(new Error("Whoops!"))
+              reject(console.log("Whoops!"))
 
           })
           let i = 0;
           let chineseString = "";  
           while (i < length) {
-            chineseString = chineseString + promise.then();
+            chineseString += promise.then();
             i++
+            console.log(chineseString)
           }
           console.log(chineseString)
           return chineseString
