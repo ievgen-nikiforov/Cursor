@@ -1,24 +1,18 @@
-function getRandomChinese(length) {
-        let promise = new Promise (
-          function (resolve, reject){
-            let chineseLetter=""
-              setTimeout(function() { 
-                let date = Date.now().toString().substring(8);
-                chineseLetter += String.fromCharCode(date)
-              },5000)
-              resolve (chineseLetter)
-              reject(console.log("Whoops!"))
-
-          })
-          let i = 0;
-          let chineseString = "";  
-          while (i < length) {
-            chineseString += promise.then();
-            i++
-            console.log(chineseString)
-          }
-          console.log(chineseString)
-          return chineseString
-      }
+function waitSomeTime() {
+  return new Promise(resolve => {
+    setTimeout(
+     resolve
+    , 50);
+  });
+}
+async function getRandomChinese (length){
+  let chineseLetters="";
+for (let index = 0; index < length; index++) {
+  await waitSomeTime();
+  let date = Date.now().toString().substring(8);
+ chineseLetters += String.fromCharCode(date)
   
-  getRandomChinese(5);
+}
+return chineseLetters
+}
+console.log(getRandomChinese(6).then (result => console.log(result)))
