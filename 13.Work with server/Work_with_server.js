@@ -2,13 +2,7 @@ document.getElementById("get_info").addEventListener("click", getInfo, {once : t
 
 function getInfo(e) {
     e.preventDefault()
-    fetch('https://swapi.dev/api/films/2', {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-          'API-Key': 'secret'
-        }
-      })
+    fetch('https://swapi.dev/api/films/2')
         .then((response) => {
             return response.json();
         })
@@ -32,13 +26,7 @@ function getInfo(e) {
         })
 }
 function planetList(){
-   fetch('https://swapi.dev/api/planets', {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-      'API-Key': 'secret'
-    }
-  })
+   fetch('https://swapi.dev/api/planets')
     .then((response) => {
         return response.json();
     })
