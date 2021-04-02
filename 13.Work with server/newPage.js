@@ -1,6 +1,6 @@
 
 function planetList(){
-   fetch('http://swapi.dev/api/planets')
+   fetch('https://swapi.dev/api/planets')
     .then((response) => {
         return response.json();
     })
