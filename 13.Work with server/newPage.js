@@ -1,6 +1,12 @@
 
 function planetList(){
-   fetch('https://swapi.dev/api/planets')
+   fetch('https://swapi.dev/api/planets', {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      'API-Key': 'secret'
+    }
+  })
     .then((response) => {
         return response.json();
     })
