@@ -27,11 +27,11 @@ while (true){
     }
 }
 const fontGenerator = newFontGenerator(14);
-console.log(fontGenerator.next("up").value);
-console.log(fontGenerator.next("up").value);
-console.log(fontGenerator.next("up").value);
-console.log(fontGenerator.next().value);
-console.log(fontGenerator.next("down").value);
-console.log(fontGenerator.next("down").value);
-console.log(fontGenerator.next("down").value);
-console.log(fontGenerator.next().value);
+console.log("fontGenerator.next('up').value >", fontGenerator.next("up").value);
+console.log("fontGenerator.next('up').value >", fontGenerator.next("up").value);
+console.log("fontGenerator.next('up').value >", fontGenerator.next("up").value);
+console.log("fontGenerator.next().value >", fontGenerator.next().value);
+console.log("fontGenerator.next('down').value >", fontGenerator.next("down").value);
+console.log("fontGenerator.next('down').value >", fontGenerator.next("down").value);
+console.log("fontGenerator.next('down').value >", fontGenerator.next("down").value);
+console.log("fontGenerator.next().value >", fontGenerator.next().value);
