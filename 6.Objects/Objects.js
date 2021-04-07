@@ -62,16 +62,6 @@ const students = [
     const studentInfo = new Object();
     studentInfo.course = student.course;
     studentInfo.name = student.name;
-    function getAverageMark(student) {
-      const { subjects, ...other } = student;
-      const subjectsEntries = Object.values(subjects);
-      const marksString = subjectsEntries.join(",");
-      const marksArray = marksString.split(",");
-      let summ = 0;
-      marksArray.forEach((element) => (summ += +element));
-      const avarageMark = Math.round((summ / marksArray.length) * 100) / 100;
-      return avarageMark;
-    }
     studentInfo.averageMark = getAverageMark(student);
     return studentInfo;
   }
@@ -94,16 +84,6 @@ const students = [
       const element = students[index];
       studentInfo[index] = new Object();
       studentInfo[index].name = element.name;
-      function getAverageMark(student) {
-        const { subjects, ...other } = student;
-        const subjectsEntries = Object.values(subjects);
-        const marksString = subjectsEntries.join(",");
-        const marksArray = marksString.split(",");
-        let summ = 0;
-        marksArray.forEach((element) => (summ += +element));
-        const avarageMark = Math.round((summ / marksArray.length) * 100) / 100;
-        return avarageMark;
-      }
       studentInfo[index].avarageMark = getAverageMark(element);
     }
     studentInfo = Object.values(studentInfo);
