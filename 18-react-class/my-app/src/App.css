@@ -1,0 +1,33 @@
+.firstName, .lastName{
+  display: inline-block;
+}
+.contact {
+  border:2px dotted;
+  margin:5px;
+  padding-left:10px;
+  background-color:antiquewhite;
+}
+.contact-list-title{
+  text-align: center;
+  font-weight: bold;
+  color:darkblue;
+  font-size: 20px;
+}
+.main-content{
+  background-color: lightgrey;
+
+}
+.input-search{
+  margin: 0 auto; 
+  width:100%;
+  text-align: right;
+}
+.input-search-field{
+  margin: 0 auto; 
+  margin-right: 1%;
+  margin-left:1%;
+  -webkit-box-sizing: border-box;
+  /*box-sizing: border-box;*/
+  text-align: right;
+  width: 98% ;
+  }
