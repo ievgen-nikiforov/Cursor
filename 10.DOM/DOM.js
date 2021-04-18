@@ -5,7 +5,6 @@ function generateBlocksInterval() {
       for (let index = 0; index < 5; index++) {
         const newDiv = document.createElement("div");
         document.body.append(newDiv);
-  
         newDiv.style.width = 50 + "px";
         newDiv.style.height = 50 + "px";
         newDiv.style.backgroundColor = getRandomColor();
