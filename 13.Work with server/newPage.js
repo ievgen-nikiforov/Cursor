@@ -13,3 +13,7 @@ document.body.append(divPlanets);
 });
 }
 planetList();
+function openNewPage1(){
+    window.location.href = 'newPage1.html'
+}
+document.getElementById("next").addEventListener("click",openNewPage1 , {once : true});
